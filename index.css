@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Georgia", serif;
+  --font-sans: "Helvetica Neue", "Arial", sans-serif;
+
+  --color-bg: #f9f7f2;
+  --color-ink: #011d13;
+  --color-accent: #011d13;
+  --color-highlight: #b3b18f;
+  --color-border: #e0d9cc;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans;
+  }
+}
+
+.editorial-label {
+  @apply text-[10px] uppercase tracking-[1.5px] font-semibold text-accent border-b border-border pb-2 mb-4 block;
+}
+
+.editorial-input {
+  @apply w-full bg-transparent border border-border p-2.5 font-sans text-sm outline-none focus:border-accent transition-colors;
+}
+
+.editorial-serif {
+  @apply font-serif italic;
+}
